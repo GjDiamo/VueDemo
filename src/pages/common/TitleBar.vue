@@ -1,24 +1,36 @@
 <!--这是一个子组件-->
 <template>
-  <div class="row title">
-    <div class="col-xs-12">
-      <!--<router-link tag="div" v-if="needBack" class="div_back" to="/">&lt;返回</router-link>-->
+  <div class="row" >
+    <div class="col-xs-12 title">
+      <div class="div-back" v-if="needback" @click="goBack">&lt;返回</div>
       {{title}}
     </div>
   </div>
 </template>
+
 <script>
   export default {
     name: "title-bar",
     //通过props来向父组件传递消息
     props: {
-      title: String,
-    }
+      title: {
+        type: String
+      },
+      needback: {
+        type: Boolean,
+        default: false
+      }
+    },
+    methods:{
+      goBack(){
+        this.$router.go(-1)
+      }
+     }
   }
+
 </script>
 <style scoped>
-  .div_back{
+  .div-back{
     position: absolute;
-    left: 15px;
   }
 </style>
