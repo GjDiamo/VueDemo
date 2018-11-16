@@ -7,8 +7,8 @@
   <!--详情信息-->
   <!--开奖日期-->
   <div style="margin-top: 8px;">
-    <div style="float: left;">第10期</div>
-    <div style="float: right;">123</div>
+    <div style="float: left;">第{{history.code}}期</div>
+    <div style="float: right;">{{history.date}}</div>
   </div>
   <!--清除浮动的div-->
   <div class="clearfix"></div>
@@ -70,7 +70,9 @@
       data() {
         return {
           code: this.$route.query.code,
-          history: {}
+          history: {
+            data:[]
+          }
         }
       },
       mounted() {

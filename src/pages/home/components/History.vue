@@ -2,7 +2,7 @@
 <!--相对于Histories他是一个根组件-->
 <template>
     <div>
-      <Histories v-for="history in data" key="history.code" :data="history"></Histories>
+      <Histories v-for="history in data" :key="history.code" :data="history"></Histories>
     </div>
 </template>
 

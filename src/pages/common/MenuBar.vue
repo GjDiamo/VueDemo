@@ -6,7 +6,7 @@
         <span class="glyphicon glyphicon-home"></span>
         <p>首页</p>
       </div>
-      <div class="col-xs-4 menu-item"  @click="handleClick('2')">
+      <div class="col-xs-4 menu-item" :class="{'menu-item-activied':index=='2'}" @click="handleClick('2')">
         <span class="glyphicon glyphicon-shopping-cart"></span>
         <p>选号</p>
       </div>

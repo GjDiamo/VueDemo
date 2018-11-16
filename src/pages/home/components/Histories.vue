@@ -18,7 +18,7 @@
       </div>
     </div>
     <!--右边1个格子,这个就是控制页面跳转的箭头-->
-    <div class="col-xs-1 div-right" @click="goToDetail('/detail?code='+history.code)">
+    <div class="col-xs-1 div-right" @click="goToDetail('/detail')">
       <span class="glyphicon glyphicon-chevron-right"></span>
     </div>
   </div>

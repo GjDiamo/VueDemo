@@ -4,6 +4,7 @@ import HomePage from '@/pages/home/HomePage'
 import DetailPage from '@/pages/home/DetailPage'
 import UserPage from "@/pages/user/UserPage"
 import SelectPage from "@/pages/shop/SelectPage"
+import LoginPage from "@/pages/user/LoginPage"
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -23,9 +24,15 @@ export default new Router({
       component:UserPage
     },
     {
+      path: '/login',
+      name: 'LoginPage',
+      component:LoginPage
+    },
+    {
       path: '/select',
       name: 'SelectPage',
       component:SelectPage
     },
+
   ]
 })
